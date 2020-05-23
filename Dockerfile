@@ -1,4 +1,4 @@
-FROM node:12.11.1-alpine
+FROM node:14.2.0-alpine
 
 # ensure local python is preferred over distribution python
 ENV PATH /usr/local/bin:$PATH
@@ -165,6 +165,7 @@ RUN apk add g++ \
 		re2c \
 		make
 
-RUN yarn global add bs-platform@5.2.0
+RUN yarn global add bs-platform@7.3.2
 
+USER node
 WORKDIR /apps/app
